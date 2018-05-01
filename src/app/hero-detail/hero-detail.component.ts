@@ -6,10 +6,15 @@ import { Hero } from '../hero';
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
 })
-export class HeroDetailComponent implements OnInit {
-  
-  constructor() { }
 
+export class HeroDetailComponent implements OnInit {
+  //@Input is a settable property annotated with an @Input decorator. 
+  //Values flow into the property when it is data bound with a property binding 
+  @Input() hero: Hero;
+
+
+  constructor() { }
+  
   ngOnInit() {
   }
 
